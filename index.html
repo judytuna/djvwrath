@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Varin Wrath - Transmissions from Beyond</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&family=Oxygen:wght@300;400;700&family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap');
         
         * {
             margin: 0;
@@ -14,8 +14,9 @@
         }
         
         body {
-            font-family: 'Exo 2', sans-serif;
-            background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #16213e 100%);
+            font-family: 'Oxygen', 'Exo 2', sans-serif;
+            background: #000000;
+            background-image: radial-gradient(ellipse at center, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.8) 70%), linear-gradient(135deg, #0a0a1a 0%, #000000 50%, #111111 100%);
             color: #ffffff;
             overflow-x: hidden;
             min-height: 100vh;
@@ -101,21 +102,18 @@
         }
         
         .artist-name {
-            font-family: 'Orbitron', monospace;
+            font-family: 'MuseoModerno', 'Orbitron', monospace;
             font-size: clamp(2.5rem, 8vw, 6rem);
-            font-weight: 900;
-            background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: neonGlow 4s ease-in-out infinite;
-            text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            font-weight: 200;
+            color: #ffffff;
             margin-bottom: 20px;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
         }
         
-        @keyframes neonGlow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
         
         .tagline {
@@ -147,12 +145,13 @@
         }
         
         .section-title {
-            font-family: 'Orbitron', monospace;
+            font-family: 'MuseoModerno', 'Orbitron', monospace;
             font-size: 2.5rem;
+            font-weight: 200;
             text-align: center;
             margin-bottom: 40px;
-            color: #00ffff;
-            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            color: #ffffff;
+            letter-spacing: 0.05em;
         }
         
         .music-grid {
@@ -178,11 +177,13 @@
         }
         
         .embed-title {
-            font-family: 'Orbitron', monospace;
+            font-family: 'MuseoModerno', 'Orbitron', monospace;
             font-size: 1.3rem;
+            font-weight: 300;
             margin-bottom: 15px;
-            color: #ff00ff;
+            color: #ffffff;
             text-align: center;
+            letter-spacing: 0.05em;
         }
         
         /* Platform links */
@@ -191,6 +192,17 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin-top: 40px;
+        }
+        
+        /* Circular profile images */
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            margin: 0 auto 15px;
+            display: block;
         }
         
         .platform-link {
@@ -277,9 +289,10 @@
         }
         
         .release-title {
-            font-family: 'Orbitron', monospace;
-            color: #00ffff;
+            font-family: 'MuseoModerno', 'Orbitron', monospace;
+            color: #ffffff;
             margin-bottom: 5px;
+            font-weight: 300;
         }
         
         .release-year {
@@ -322,10 +335,11 @@
         }
         
         .track-title {
-            font-family: 'Orbitron', monospace;
-            color: #00ffff;
+            font-family: 'MuseoModerno', 'Orbitron', monospace;
+            color: #ffffff;
             margin-bottom: 5px;
             font-size: 1.1rem;
+            font-weight: 300;
         }
         
         .track-details {
@@ -409,12 +423,21 @@
         .social-link .platform-icon {
             font-size: 2rem;
             margin-right: 15px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            flex-shrink: 0;
         }
         
         .social-link h4 {
-            font-family: 'Orbitron', monospace;
-            color: #00ffff;
+            font-family: 'MuseoModerno', 'Orbitron', monospace;
+            color: #ffffff;
             margin-bottom: 5px;
+            font-weight: 300;
         }
         
         .social-link p {
@@ -478,10 +501,11 @@
         }
         
         .stream-title {
-            font-family: 'Orbitron', monospace;
-            color: #00ffff;
+            font-family: 'MuseoModerno', 'Orbitron', monospace;
+            color: #ffffff;
             font-size: 1.1rem;
             margin-bottom: 8px;
+            font-weight: 300;
         }
         
         .stream-game {
