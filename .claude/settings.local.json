@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:parts-unknown.carrd.co)"
+      "WebFetch(domain:parts-unknown.carrd.co)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []

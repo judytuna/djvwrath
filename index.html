@@ -825,15 +825,30 @@
             <div class="music-grid">
                 <div class="music-embed">
                     <h3 class="embed-title">Tidal High-Fidelity Stream</h3>
-                    <iframe src="https://embed.tidal.com/artists/52712498?layout=gridify" 
-                            width="100%" 
-                            height="400" 
-                            frameborder="0" 
-                            allowtransparency="true">
-                    </iframe>
+                    <!-- Replace ARTIST_ID below with your actual Tidal artist ID -->
+                    <!-- To get your embed code: Go to your Tidal artist page → three dots → Share → Copy embed code -->
+                    <div class="tidal-embed" data-type="artist" data-id="REPLACE_WITH_YOUR_ARTIST_ID" style="min-height: 350px; background: rgba(0,0,0,0.1); border-radius: 15px; padding: 20px;"></div>
+                    <script src="https://embed.tidal.com/tidal-embed.js"></script>
+                    
+                    <!-- Fallback content while embed loads or if artist not found -->
+                    <div id="tidal-fallback" style="background: rgba(0,0,0,0.3); border-radius: 15px; padding: 30px; text-align: center; min-height: 350px; display: flex; flex-direction: column; justify-content: center;">
+                        <div style="font-size: 4rem; margin-bottom: 20px;">🌊</div>
+                        <h4 style="color: #ffffff; font-family: 'MuseoModerno', monospace; margin-bottom: 15px;">Stream in Lossless Quality</h4>
+                        <p style="color: #b8b8b8; margin-bottom: 25px; line-height: 1.6;">
+                            Experience Varin Wrath's alien frequencies in crystal-clear, high-fidelity audio on Tidal.
+                        </p>
+                        <a href="https://tidal.com/search?q=Varin%20Wrath" 
+                           target="_blank" 
+                           style="display: inline-block; padding: 15px 30px; background: linear-gradient(45deg, #1e90ff, #00bfff); color: white; text-decoration: none; border-radius: 30px; font-weight: bold; font-family: 'MuseoModerno', monospace; transition: all 0.3s ease;"
+                           onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 20px rgba(30, 144, 255, 0.4)'"
+                           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+                            🌊 Search on Tidal
+                        </a>
+                    </div>
+                    
                     <div class="tidal-info">
-                        <p style="color: #00ffff; font-size: 0.9rem; text-align: center; margin-top: 10px;">
-                            🌊 Experience alien frequencies in lossless quality
+                        <p style="color: #7b68ee; font-size: 0.9rem; text-align: center; margin-top: 10px;">
+                            🎧 Lossless audio • MQA quality • Alien-approved fidelity
                         </p>
                     </div>
                 </div>
