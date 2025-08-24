@@ -1049,23 +1049,13 @@
             }
         }
         
-        // Parallax effect for elements
-        function handleParallax() {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.music-embed');
-            
-            parallaxElements.forEach((element, index) => {
-                const speed = 0.5 + (index * 0.1);
-                element.style.transform = `translateY(${scrolled * speed * 0.1}px)`;
-            });
-        }
+        // Removed parallax effect to prevent unwanted movement
         
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             createStars();
             
-            // Add scroll listener for parallax
-            window.addEventListener('scroll', handleParallax);
+            // Removed parallax scroll listener
             
             // Add hover effects to platform links
             const platformLinks = document.querySelectorAll('.platform-link');
@@ -1600,8 +1590,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             createStars();
             
-            // Add scroll listener for parallax
-            window.addEventListener('scroll', handleParallax);
+            // Removed parallax scroll listener
             
             // Add hover effects to platform links
             const platformLinks = document.querySelectorAll('.platform-link');
